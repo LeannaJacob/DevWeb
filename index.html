@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Le Monde Incroyable Des Animaux</title>
+  <style>
+    h1 {text-align: center;}
+    .smallpictures{display: none;}
+    .categorybutton{display: none;}
+    .login-zone
+    {display: none;
+      background: black;
+    position: absolute; width: 500px; height: 300px; left:350px; top:200px; }
+    .signup-zone{display: none; background: black; position: absolute; width: 500px; height: 300px; left: 350px; top: 200px;}
+    .passwords-do-not-match{display: none; position: absolute; top: 245px; left: 150px; color: red;}
+    .name-required{display: none; position: absolute; top: 93px; left: 150px; color: red;}
+    .email-invalid{display: none; position: absolute; top: 123px; left: 150px; color: red;}
+  </style>
+  </head>
+  <body style= "background-color:rgb(0, 75, 35)">
+
+
+    <div style="position: absolute; width: 1200px; height: 100px; background-color: rgb(0, 0, 0); left: 0px; top: 0px"</div>
+    <h1 style="color:rgb(256, 256, 256)">Le monde incroyable des animaux</h1>
+    <div class="smallpictures" id="smallpictures">
+    <img src="img/Jumping spider.jpeg" alt="Jumping spider mid-jump" style="position: absolute; width:300px; height:165px; object-fit: cover; left:50px; top: 200px;"/>
+    <img src="img/mudskipper.webp" alt="Two mudskippers out of water" style="position: absolute; width:300px; height:165px; object-fit: cover; left:450px; top: 200px;"/>
+    <img src="img/Aye aye.jpeg" alt="Aye aye in someones hand" style="position: absolute; width:300px; height:165px; object-fit: cover;left:850px; top: 200px;"/>
+    <img src="img/Immortal jellyfish.jpeg" alt="Immortal Jellyfish" style="position: absolute; width:300px; height:165px; object-fit: cover; left:50px; top: 500px;"/>
+    <img src="img/Flatworm.jpeg" alt="Black and pink flatworm" style="position: absolute; width:300px; height:165px; object-fit: cover; left:450px; top: 500px;"/>
+    <img src="img/Mantis shrimp.jpeg" alt="Peacock mantis shrimp" style="position: absolute; width:300px; left:850px; top: 500px;"/>
+    </div>
+  <div class="categorybutton" id="categorybutton">
+    <a href="html/Cute.html">
+    <button type="button" name="Cute" style="position: absolute; width: 200px; height: 30px; left: 100px; top: 375px; background-color:rgb(0, 0, 0); color:white;" >Cute</button>
+    </a>
+    <a href="html/Other.html">
+    <button type="button" name="button" style="position: absolute; width: 200px; height: 30px; left: 500px; top: 375px; background-color:rgb(0, 0, 0); color:white;">Other</button>
+    </a>
+    <a href="html/Scary.html">
+    <button type="button" name="button" style="position: absolute; width: 200px; height: 30px; left: 900px; top: 375px; background-color:rgb(0, 0, 0); color:white;" >Scary</button>
+    </a>
+    <a href="html/Unique abilities.html">
+    <button type="button" name="button" style="position: absolute; width: 200px; height: 30px; left: 100px; top: 675px; background-color:rgb(0, 0, 0); color:white;" >Unique Abilities</button>
+    </a>
+    <a href="html/Weird Reproduction.html">
+    <button type="button" name="button" style="position: absolute; width: 200px; height: 30px; left: 500px; top: 675px; background-color:rgb(0, 0, 0); color:white;" >Weird Reproduction</button>
+    </a>
+    <a href="html/Weird.html">
+    <button type="button" name="button" style="position: absolute; width: 200px; height: 30px; left: 900px; top: 675px; background-color:rgb(0, 0, 0); color:white;" >Weird</button>
+    </a>
+  </div>
+  <div class="login-zone" id="loginZone">
+    <h2 style="color:rgb(256, 256, 256); text-align:center;">Connexion</h2>
+    <input style="position: absolute; top: 100px; left: 150px; width: 200px;" type="email" placeholder="Adresse email" required>
+    <input style="position: absolute; top: 130px; left: 150px; width: 200px;" type="password" placeholder="Mot de passe" required>
+    <button type= "submit" style="position: absolute; top: 170px; left: 150px; width: 100px;" onclick="">Se connecter</button>
+    <button style="position: absolute; top: 270px; left: 10px; width: 100px;" onclick="afficherSignup()">S'inscrire</button>
+
+  </div>
+
+  <div class="signup-zone" id="signupZone">
+    <h2 style="color:rgb(256, 256, 256); text-align:center;">Inscription</h2>
+    <input style="position: absolute; top: 100px; left: 150px; width: 200px;" placeholder="Nom" required id="nameInput">
+    <input style="position: absolute; top: 130px; left: 150px; width: 200px;" type="email" placeholder="Adresse email" required id="emailInput">
+    <input style="position: absolute; top: 160px; left: 150px; width: 200px;" type="password" placeholder="Mot de passe" required id="password">
+    <input style="position: absolute; top: 190px; left: 150px; width: 200px;" type="password" placeholder="Confirmer mot de passe" required id="confirmPassword">
+    <button style="position: absolute; top: 270px; left: 10px; width: 100px;" onclick="afficherLogin()">Se connecter</button>
+    <button type="submit" style="position: absolute; top: 230px; left: 150px; width: 100px;" onclick="attemptSignup()">S'inscrire</button>
+
+    <div class="passwords-do-not-match" id="passwordsDoNotMatch">
+    <h6> *Les mot de passes ne correspondent pas </h6>
+    </div>
+
+    <div class="name-required" id="nameRequired">
+    <h6>*Nom requise</h6>
+    </div>
+
+    <div class="email-invalid" id="emailInvalid">
+    <h6>*Email doit être valide</h6>
+    </div>
+
+  </div>
+  <div>
+    <button onclick="afficherLogin()" id="bouttonConnexion" style="position:absolute; width: 100px; height: 40px; left: 975px; top: 30px; background-color:rgb(365,356,365); color:rgb(0, 0, 0)">Connexion</button>
+  </div>
+
+
+<script type="module" src="javascript/app.js"></script>
+
+</body>
+
+
+</html>
